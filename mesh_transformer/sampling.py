@@ -47,4 +47,4 @@ def nucleaus_sample(key, logits, _, top_p=0.9, temp=1, top_k=None):
 if __name__ == "__main__":
     import numpy as np
     logits = np.array([[-2, -1, 0, 0.8, 0, 0.1, 0.3, 0.4, 0.5, 0.6, 0.7, -3]])
-    #print(nucleaus_filter(logits))
+    print(nucleaus_filter(logits))
