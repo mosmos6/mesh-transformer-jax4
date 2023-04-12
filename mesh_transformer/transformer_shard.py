@@ -249,7 +249,7 @@ class CausalTransformer:
 
         self.move_xmap = jax.experimental.maps.xmap(fun=lambda x, _: to_bf16(x),
                                                     in_axes=(["shard", ...], ["batch", ...]),
-                                                    out_axes=["shard", ...],
+                                                    out_axes=["shard", "batch", ...],
                                                     axis_resources={'shard': 'mp', 'batch': 'dp'})
 
         key = hk.PRNGSequence(42)
